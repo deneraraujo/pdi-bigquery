@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <pentaho.kettle.version>6.1.0.1-196</pentaho.kettle.version>
+    <pentaho.kettle.version>9.2.0.0-SNAPSHOT</pentaho.kettle.version>
   </properties>
 
   <build>
@@ -88,7 +88,7 @@
   <repositories>
     <repository>
       <id>pentaho</id>
-      <url>http://ivy-nexus.pentaho.org/content/groups/omni</url>
+      <url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
     </repository>
   </repositories>
 </project>
