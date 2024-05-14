@@ -19,7 +19,7 @@ You can use Microsoft Visual Studio Code (free) to build this, or manually.
 1. Ensure you have installed Maven globally on your computer
 1. Open the pdi-bigquery folder in Microsoft Code
 1. Ensure you have the 'Language support for Java(tm) by RedHat' extension installed in Microsoft Visual Studio Code
-1. Go to the Tasks menu, and choose Run Build Task...
+1. Go to the Terminal menu, and choose Run Build Task...
 1. Run the 'verify' build task
 
 This will download all dependencies, and then build the project.
@@ -42,7 +42,7 @@ mvn -B test -e -o
 
 ## Installing the plugin
 
-You now have a ZIP file in assemblies/plugin/target/ unpack this in to your PENTAHO_HOME/design-tools/data-integration/plugins folder.
+You now have a ZIP file in target/ folder. Unpack this in to your PENTAHO_HOME/design-tools/data-integration/plugins folder.
 
 ## Samples
 
