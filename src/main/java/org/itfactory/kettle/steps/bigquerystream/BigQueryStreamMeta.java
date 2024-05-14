@@ -26,16 +26,11 @@ import java.util.List;
 
 import org.pentaho.di.core.CheckResult;
 import org.pentaho.di.core.CheckResultInterface;
-import org.pentaho.di.core.Const;
 import org.pentaho.di.core.annotations.Step;
 import org.pentaho.di.core.database.DatabaseMeta;
 import org.pentaho.di.core.exception.KettleException;
-import org.pentaho.di.core.exception.KettleStepException;
 import org.pentaho.di.core.exception.KettleXMLException;
 import org.pentaho.di.core.row.RowMetaInterface;
-import org.pentaho.di.core.row.RowMeta;
-import org.pentaho.di.core.row.ValueMetaInterface;
-import org.pentaho.di.core.row.value.ValueMetaFactory;
 import org.pentaho.di.core.variables.VariableSpace;
 import org.pentaho.di.core.xml.XMLHandler;
 import org.pentaho.di.i18n.BaseMessages;
@@ -169,18 +164,6 @@ public class BigQueryStreamMeta extends BaseStepMeta implements StepMetaInterfac
    * Sets default metadata configuration
    */
   public void setDefault() {
-    int i, nrfields;
-
-    nrfields = 0;
-/*
-    allocate( nrfields );
-
-    for ( i = 0; i < nrfields; i++ ) {
-      fieldName[i] = BaseMessages.getString( PKG, "FieldAnalysisMeta.Fieldname.Label" );
-      fieldNewName[i] = BaseMessages.getString( PKG, "FieldAnalysisMeta.NewName.Label" );
-      aggregateType[i] = TYPE_AGGREGATE_SUM;
-    }
-    */
   }
 
   @Override

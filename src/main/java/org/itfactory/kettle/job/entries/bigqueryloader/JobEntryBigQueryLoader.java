@@ -78,9 +78,7 @@ import java.util.Map;
  * @author asimoes
  * @since 02-11-2017
  */
-public class JobEntryBigQueryLoader extends JobEntryBase implements Cloneable, JobEntryInterface {
-
-  private static Class<?> PKG = JobEntryBigQueryLoader.class;
+public class JobEntryBigQueryLoader extends JobEntryBase implements JobEntryInterface {
 
   public static final String TYPE_JSON = "JSON";
   public static final String TYPE_CSV = "CSV";
@@ -234,7 +232,6 @@ public class JobEntryBigQueryLoader extends JobEntryBase implements Cloneable, J
       leadingRowsToSkip = XMLHandler.getTagValue( entrynode, "leadingRowsToSkip" );
 
       int i, nrfields;
-      String type;
 
       Node fields = XMLHandler.getSubNode( entrynode, "fields" );
       nrfields = XMLHandler.countNodes( fields, "field" );

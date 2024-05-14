@@ -22,7 +22,7 @@
 
 package org.itfactory.kettle.google.vfs;
 
-import org.apache.commons.vfs2.provider.URLFileNameParser;
+import org.apache.commons.vfs2.provider.GenericURLFileNameParser;
 
 /**
  * GCSFileNameParser
@@ -30,7 +30,7 @@ import org.apache.commons.vfs2.provider.URLFileNameParser;
  * @author asimoes
  * @since 15-11-2017
  */
-public class GCSFileNameParser extends URLFileNameParser {
+public class GCSFileNameParser extends GenericURLFileNameParser {
 
   private static final GCSFileNameParser INSTANCE = new GCSFileNameParser();
 

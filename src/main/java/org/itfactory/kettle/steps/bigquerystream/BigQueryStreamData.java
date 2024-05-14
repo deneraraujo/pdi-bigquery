@@ -24,7 +24,6 @@ package org.itfactory.kettle.steps.bigquerystream;
 
 import org.pentaho.di.core.row.RowMetaInterface;
 import org.pentaho.di.trans.step.BaseStepData;
-import org.pentaho.di.trans.step.StepDataInterface;
 
 import com.google.cloud.bigquery.BigQuery;
 import com.google.cloud.bigquery.TableId;
@@ -36,7 +35,7 @@ import com.google.cloud.bigquery.InsertAllRequest;
  * @author afowler
  * @since 06-11-2017
  */
-public class BigQueryStreamData extends BaseStepData implements StepDataInterface {
+public class BigQueryStreamData extends BaseStepData {
   public RowMetaInterface outputRowMeta;
   public RowMetaInterface inputRowMeta;
 

@@ -25,8 +25,6 @@ package org.itfactory.kettle.job.entries.bigqueryloader;
 import com.google.cloud.bigquery.LegacySQLTypeName;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
-import org.eclipse.swt.custom.CTabFolder;
-import org.eclipse.swt.custom.CTabItem;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -38,7 +36,6 @@ import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
@@ -135,12 +132,6 @@ public class JobEntryBigQueryLoaderDialog extends JobEntryDialog implements JobE
   private Listener lsOK, lsCancel, lsResize;
 
   private Shell shell;
-
-  private SelectionAdapter lsDef;
-
-  private CTabFolder wTabFolder;
-  private Composite wGeneralComp, wFilesComp;
-  private CTabItem wGeneralTab;
 
   private boolean changed = false;
 
@@ -517,7 +508,7 @@ public class JobEntryBigQueryLoaderDialog extends JobEntryDialog implements JobE
     wCancel.addListener( SWT.Selection, lsCancel );
     wOK.addListener( SWT.Selection, lsOK );
 
-    lsDef = new SelectionAdapter() {
+    new SelectionAdapter() {
       public void widgetDefaultSelected( SelectionEvent e ) {
         ok();
       }

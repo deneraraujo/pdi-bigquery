@@ -36,7 +36,7 @@ import java.util.Collection;
  * @author asimoes
  * @since 15-11-2017
  */
-public class GCSFileSystem extends AbstractFileSystem implements FileSystem {
+public class GCSFileSystem extends AbstractFileSystem {
 
   private Storage storage;
 

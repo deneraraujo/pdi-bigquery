@@ -102,8 +102,6 @@ public class BigQueryStreamDialog extends BaseStepDialog implements StepDialogIn
 
   private Listener lsOK, lsCancel;
 
-  private SelectionAdapter lsDef;
-
   private boolean changed = false;
 
   /**
@@ -315,7 +313,7 @@ public class BigQueryStreamDialog extends BaseStepDialog implements StepDialogIn
     wCancel.addListener( SWT.Selection, lsCancel );
     wOK.addListener( SWT.Selection, lsOK );
 
-    lsDef = new SelectionAdapter() {
+    new SelectionAdapter() {
       public void widgetDefaultSelected( SelectionEvent e ) {
         ok();
       }

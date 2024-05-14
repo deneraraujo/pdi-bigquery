@@ -32,7 +32,7 @@ import org.apache.commons.vfs2.FileType;
 import org.apache.commons.vfs2.provider.AbstractFileName;
 import org.apache.commons.vfs2.provider.AbstractFileObject;
 import org.apache.commons.vfs2.provider.AbstractFileSystem;
-import org.apache.commons.vfs2.provider.URLFileName;
+import org.apache.commons.vfs2.provider.GenericURLFileName;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -46,7 +46,7 @@ import java.util.List;
  * @author asimoes
  * @since 15-11-2017
  */
-public class GCSFileObject extends AbstractFileObject {
+public class GCSFileObject extends AbstractFileObject<AbstractFileSystem> {
 
   public static final String DELIMITER = "/";
   private GCSFileSystem fileSystem = null;
@@ -61,7 +61,7 @@ public class GCSFileObject extends AbstractFileObject {
 
   protected Bucket getGCSBucket() throws Exception {
     if ( bucket == null ) {
-      String bucketName = ( (URLFileName) this.getName() ).getHostName();
+      String bucketName = ( (GenericURLFileName) this.getName() ).getHostName();
 
       Storage storage = fileSystem.getStorage();
       if ( storage != null ) {

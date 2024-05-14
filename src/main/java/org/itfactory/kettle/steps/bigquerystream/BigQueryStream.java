@@ -29,7 +29,6 @@ import org.pentaho.di.trans.Trans;
 import org.pentaho.di.trans.TransMeta;
 import org.pentaho.di.trans.step.BaseStep;
 import org.pentaho.di.trans.step.StepDataInterface;
-import org.pentaho.di.trans.step.StepInterface;
 import org.pentaho.di.trans.step.StepMeta;
 import org.pentaho.di.trans.step.StepMetaInterface;
 
@@ -63,7 +62,7 @@ import java.io.IOException;
  * @author afowler
  * @since 06-11-2017
  */
-public class BigQueryStream extends BaseStep implements StepInterface {
+public class BigQueryStream extends BaseStep {
   private static Class<?> PKG = BigQueryStreamMeta.class; // for i18n purposes, needed by Translator2!!
 
   private BigQueryStreamMeta meta;
