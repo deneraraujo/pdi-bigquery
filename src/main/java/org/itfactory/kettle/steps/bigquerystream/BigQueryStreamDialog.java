@@ -136,7 +136,7 @@ public class BigQueryStreamDialog extends BaseStepDialog implements StepDialogIn
     formLayout.marginHeight = Const.FORM_MARGIN;
   
     shell.setLayout( formLayout );
-    shell.setText( BaseMessages.getString( PKG, "BigQueryStream.Title" ) );
+    shell.setText( BaseMessages.getString( PKG, "BigQueryStream.Name" ) );
   
     int middle = props.getMiddlePct();
     int margin = Const.MARGIN;
