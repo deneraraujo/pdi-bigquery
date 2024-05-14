@@ -67,12 +67,12 @@ public class BigQueryStreamMeta extends BaseStepMeta implements StepMetaInterfac
   private static Class<?> PKG = BigQueryStreamMeta.class; // for i18n purposes, needed by Translator2!!
 
   private boolean useContainerSecurity = false;
-  private String credentialsPath = "C:/Users/afowler/Documents/Apps/google-cloud/BigQueryTesting-fd7a2959ea0f.json";
-  private String projectId = "bigquery-testing-184814";
-  private String datasetName = "salesdata";
-  private String tableName = "ages";
-  private boolean createDataset = true;
-  private boolean createTable = true;
+  private String credentialsPath = "";
+  private String projectId = "";
+  private String datasetName = "";
+  private String tableName = "";
+  private boolean createDataset = false;
+  private boolean createTable = false;
 
   @Override
   /**
