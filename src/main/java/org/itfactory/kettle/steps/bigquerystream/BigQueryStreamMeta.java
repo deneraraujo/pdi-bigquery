@@ -56,7 +56,7 @@ import org.w3c.dom.Node;
 image = "google_query.svg",
  i18nPackageName = "org.itfactory.kettle.steps.bigquerystream", name = "BigQueryStream.Name",
  description = "BigQueryStream.Description",
- categoryDescription = "i18n:org.pentaho.di.steps:StepCategory.Category.BigData" )
+ categoryDescription = "i18n:org.pentaho.di.trans.step:BaseStep.Category.BigData" )
 /**
  * Metadata (configuration) holding class for the BigQuery stream loading custom step
  * 
