@@ -197,7 +197,7 @@ public class GCSFileObject extends AbstractFileObject<AbstractFileSystem> {
 
   @Override
   protected long doGetLastModifiedTime() throws Exception {
-    return getBlob().getUpdateTime();
+    return getBlob().getUpdateTimeOffsetDateTime().toInstant().toEpochMilli();
   }
 
   @Override
