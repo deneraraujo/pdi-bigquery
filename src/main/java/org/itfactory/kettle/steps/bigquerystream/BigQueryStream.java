@@ -226,9 +226,13 @@ public class BigQueryStream extends BaseStep {
       ValueMetaInterface valueMeta = data.inputRowMeta.getValueMeta( i );
       Object valueData = r[i];
 
+      // Workaround for datetime fields
+      if (valueData != null && data.outputRowMeta.getValueMeta(i).getTypeDesc().toLowerCase().equals("timestamp")) {
+        valueData = r[i].toString();
+      }
+
       // Copy field name and value to BigQuery field
       // add field to row
-      // TODO check for null values, and ignore (not supported by BigQuery)
       rowContent.put( valueMeta.getName(), valueData );
 
     }
@@ -274,7 +278,9 @@ public class BigQueryStream extends BaseStep {
 
       // initialise new batch
       data.batchCounter = 0;
-      data.insertBuilder = InsertAllRequest.newBuilder( data.tableId );
+      if (data.tableId != null) {
+        data.insertBuilder = InsertAllRequest.newBuilder( data.tableId );
+      }
     } else {
       data.batchCounter++; // increment counter if row not null or we're not on a new stream batch
     }
