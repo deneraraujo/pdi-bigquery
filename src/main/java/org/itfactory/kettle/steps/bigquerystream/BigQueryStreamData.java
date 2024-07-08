@@ -22,12 +22,13 @@
 
 package org.itfactory.kettle.steps.bigquerystream;
 
+import java.util.Map;
+
 import org.pentaho.di.core.row.RowMetaInterface;
 import org.pentaho.di.trans.step.BaseStepData;
 
 import com.google.cloud.bigquery.BigQuery;
 import com.google.cloud.bigquery.TableId;
-import com.google.cloud.bigquery.InsertAllRequest;
 
 /**
  * Runtime transient data container for the PDI BigQuery stream step
@@ -39,17 +40,20 @@ public class BigQueryStreamData extends BaseStepData {
   public RowMetaInterface outputRowMeta;
   public RowMetaInterface inputRowMeta;
 
-  // TODO use the below to handle specified fields only (not all stream fields)
-  public int[] fieldnrs;
-  public int nrfields;
-  public Object[] values;
-  public Object[] fieldNames;
+  // Stores table primary key rows
+  public String[] pk;
 
-  // bigquery stream state variables
+  // Stores columns types
+  public Map<String, String> typeMap;
+
+  // Bigquery stream state variables
   public BigQuery bigquery;
   public TableId tableId;
-  public InsertAllRequest.Builder insertBuilder;
-  public int batchCounter = 0;
+  public BigQueryStreamBatch batch;
+
+  // Add and Update counters
+  public int insertCount;
+  public int updateCount;
 
   /**
    * Default constructor
@@ -57,5 +61,4 @@ public class BigQueryStreamData extends BaseStepData {
   public BigQueryStreamData() {
     super();
   }
-
 }

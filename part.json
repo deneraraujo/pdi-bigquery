@@ -1,5 +1,5 @@
 {
-    "identifier": "pdi-google-cloud",
+    "identifier": "pdi-bigquery",
     "title": "PDI Google Cloud extensions",
     "description": "PDI job Entry and Steps for Google Cloud, including Cloud Storage and BigQuery",
     "version": "1.0.0",
