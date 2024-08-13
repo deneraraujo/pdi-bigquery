@@ -72,13 +72,7 @@
       <scope>system</scope>
       <systemPath>${project.basedir}/src/main/resources/metastore-${pentaho.kettle.version}.jar</systemPath>
     </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-vfs2</artifactId>
-      <version>2.9.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/src/main/resources/commons-vfs2-2.9.0.jar</systemPath>
-    </dependency>
+    
     <dependency>
       <groupId>org.eclipse.platform</groupId>
       <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
